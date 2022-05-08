@@ -1,0 +1,42 @@
+.artists{
+    width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.aArtist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 204px;
+    height: 248px;
+}
+.avatar{
+    width: 108px;
+    height: 108px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap:wrap;
+}
+.mhz{
+    width: 204px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.other{
+    width: 1024px;
+}

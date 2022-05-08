@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+    <title>my</title>
+</head>
+<body>
+<div>
+    <div class="myRedHeart">我的红心歌曲</div>
+    <ul class="songList">
+        <li th:each="song,it:${songs}">
+            <img th:src="${song.cover}"/>
+            <div th:text="${song.name}"></div>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

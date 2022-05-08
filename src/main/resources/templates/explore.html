@@ -1,0 +1,26 @@
+<div th:fragment="explore" class="explore">
+    <div class="artist">
+        <span class="title">从艺术家出发</span>
+        <ul class="artists">
+            <li th:each="singerSubject,it:${artistDatas}" th:if="${it.count<11}" class="aArtist">
+                <a th:href="|/artist?subjectId=${singerSubject.id}|" class="info">
+                    <img th:src="${singerSubject.cover}" class="avatar"/>
+                    <div class="name" th:text="${singerSubject.name}"></div>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="other">
+        <div class="unit" th:each="mhzViewModel:${mhzViewModels}">
+            <span class="title" th:text="${mhzViewModel.title}"></span>
+            <ul class="content">
+                <li th:each="subject:${mhzViewModel.subjects}" class="mhz">
+                    <a th:href="|/artist?subjectId=${subject.id}|">
+                        <span th:text="${subject.name} "></span>
+                        <span>Mhz</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

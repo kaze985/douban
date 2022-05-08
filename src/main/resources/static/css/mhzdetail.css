@@ -1,0 +1,25 @@
+.mhzdetail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.song{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.cover{
+    width: 108px;
+    height: 108px;
+}
+.singerInfo{
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.text1{
+    margin-bottom: 20px;
+}

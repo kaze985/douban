@@ -1,0 +1,23 @@
+.p1,.p2{
+  margin-bottom: 20px;
+  opacity: 1;
+  color: rgba(162.56,162.56,162.56,1);
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "PingFang SC";
+  text-align: center;
+}
+.p3{
+  opacity: 1;
+  color: rgba(38.25,38.25,38.25,1);
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "PingFang SC";
+  text-align: center;
+}
+.footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}

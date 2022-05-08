@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="referrer" content="never">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+    <title>详情页</title>
+</head>
+<body>
+    <div th:fragment="mhzdetail" class="mhzdetail">
+        <audio
+                controls autoplay
+                src="">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+        <div class="songName"></div>
+        <div class="singerInfo">
+            <img  class="avatar" th:src="${subject.cover}"/>
+            <div class="name" th:text="${subject.name}"></div>
+<!--            <div th:replace="share::share"></div>-->
+        </div>
+        <div class="singerSongs">
+            <div class="text1">全部精选歌曲</div>
+            <ul>
+                <li class="song" th:each="song,it:${songs}" th:if="${it.count<100}" th:onclick="|next(this.getAttribute('data'),this.getAttribute('data1'))|" th:data="${song.url}" th:data1="${song.name}">
+                    <img class="cover" th:src="${song.cover}"/>&emsp;&emsp;
+                    <span class="songName" th:text="${it.count}+'.'+${song.name}"></span>&emsp;&emsp;
+                    <button class="like" th:onclick="|likeSong(this.getAttribute('data'))|" th:data="${song.id}">喜欢</button>
+                </li>
+            </ul>
+<!--            <div class="text2">查看全部精选歌曲</div>-->
+        </div>
+<!--        <div class="simSingers">-->
+<!--            <div class="text3" th:text="${subject.name}"></div>-->
+<!--            <div class="text4">该兆赫可能包含以下相似艺术家的歌曲</div>-->
+<!--            <ul>-->
+<!--                <li th:each="simSinger,it:${simSingers}" th:if="${it.count<9}">-->
+<!--                    <img th:src="${simSinger.avatar}" class="avatar"/>-->
+<!--                    <div class="name" th:text="${simSinger.name}"></div>-->
+<!--                </li>-->
+<!--            </ul>-->
+<!--        </div>-->
+    </div>
+    <script src="/js/like.js"></script>
+    <script src="/js/switch.js"></script>
+</body>
+</html>

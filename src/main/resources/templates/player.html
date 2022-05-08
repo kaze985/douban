@@ -1,0 +1,14 @@
+<div th:fragment="player" class="player">
+    <audio
+            controls autoplay
+            th:src="${song.url}">
+        Your browser does not support the
+        <code>audio</code> element.
+    </audio>
+    <div>当前歌曲：<span class="songName" th:text="${song.name}"></span></div>
+
+    <button onclick="update()">下一首</button>
+<!--    <div th:replace="share::share"></div>-->
+<!--    <div class="txt"> 下载豆瓣FM APP<br> 让好音乐继续 </div>-->
+    <script src="/js/userguide.js"></script>
+</div>
